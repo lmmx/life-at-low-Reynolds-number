@@ -23,6 +23,7 @@ div#slider-box {
 }
 input#slider {
     float: left;
+    width: 55px;
 }
 p#slidetitle {
     font-family: monospace;
@@ -46,6 +47,7 @@ function changeFontSize() {
     fontstyle.innerHTML = 'body p {font-size: ' + String(slidesize) + 'px;}';
 }
 
+
   slider = document.createElement('input');
   slider.setAttribute('type','range');
   slider.setAttribute('min','12');
@@ -58,7 +60,7 @@ function changeFontSize() {
   slidebox.setAttribute('id','slider-box');
   var slidetitle = document.createElement('p');
   slidetitle.setAttribute('id','slidetitle');
-  slidetitle.innerHTML = 'Drag to change font size';
+  slidetitle.innerHTML = 'Font size';
   slidebox.appendChild(slidetitle);
   slidebox.appendChild(slider);
   document.body.insertBefore(slidebox, ednote)
