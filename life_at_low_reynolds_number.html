@@ -2,12 +2,68 @@
 <!-- saved from url=(0154)http://www.uam.es/personal_pdi/ciencias/agrait/nico_archivos/docencia/fisica%20de%20fluidos/Life%20at%20Low%20Reynolds%20Number,%20EM%20Purcell%201973.htm -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>Life at Low Reynolds Number, EM Purcell 1973.</title>
 <meta content="MSHTML 6.00.2800.1458" name="GENERATOR">
-<meta content="Jim Brody" name="Author"></head>
+<meta content="Jim Brody" name="Author">
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/ktpagkh/eWqnle7am/base64_font_spec.css" />
+    <style type="text/css">
+* {
+    font-family: 'SEGOEUIL';
+    -webkit-transition: all 0.2s ease-in;
+}
+body {
+    margin: 1.4em;
+}
+img {
+    margin: 1em;
+}
+div#slider-box {
+    margin: 1em;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+input#slider {
+    float: left;
+}
+p#slidetitle {
+    font-family: monospace;
+    font-size: 80%;
+}
+    </style>
+    <style id="font-size-controller">
+        body p {font-size: 16px;}
+    </style>
+</head>
 <body>
-<center><b>Life at Low Reynolds Number</b></center>
+<center><h1>Life at Low Reynolds Number</h1></center>
 <center>E.M. Purcell</center>
 <center>Lyman Laboratory, Harvard University, Cambridge, Mass 02138</center>
 <center>June 1976</center>
+
+<script>
+function changeFontSize() {
+    var fontstyle = document.getElementById('font-size-controller');
+    var slidesize = document.getElementById('slider').value;
+    fontstyle.innerHTML = 'body p {font-size: ' + String(slidesize) + 'px;}';
+}
+
+  slider = document.createElement('input');
+  slider.setAttribute('type','range');
+  slider.setAttribute('min','12');
+  slider.setAttribute('max','28');
+  slider.value = 16;
+  slider.setAttribute('id','slider');
+  slider.setAttribute('onchange','changeFontSize();');
+  var ednote = document.getElementById('editors-note');
+  var slidebox = document.createElement('div');
+  slidebox.setAttribute('id','slider-box');
+  var slidetitle = document.createElement('p');
+  slidetitle.setAttribute('id','slidetitle');
+  slidetitle.innerHTML = 'Drag to change font size';
+  slidebox.appendChild(slidetitle);
+  slidebox.appendChild(slider);
+  document.body.insertBefore(slidebox, ednote)
+</script>
+
 <p>American Journal of Physics vol 45, pages 3-11, 1977. <br><i>Editor's note: This is a reprint of a (slightly edited) paper of the same title that appeared in the book Physics and Our World: A Symposium in Honor of Victor F. Weiskopf, published by the American Journal of Physics (1976). The personal tone of the original talk has been preserved in the paper, which was itself a slightly edited transcript of a tape. The figures reproduce transparencies used in the talk. The demonstration involved a tall rectangular transparent vessel of corn syrup, projected by an overhead projector turned on its side. Some essential hand waving could not be reproduced.</i> </p>
 <p>This is a talk that I would not, I'm afraid, have the nerve to give under any other circumstances. It's a story I've been saving up to tell Viki. Like so many of you here, I've enjoyed from time to time the wonderful experience of exploring with Viki some part of physics, or anything to which we can apply physics. We wander around strictly as amateurs equipped only with some elementary physics even if we don't throw much light on the other subjects. Now this is that kind of a subject, but I have still another reason for wanting to, as it were, needle Viki with it, because I'm going to talk for a while about viscosity. Viscosity in a liquid will be the dominant theme here and you know Viki's program of explaining everything including the height of mountains, with the elementary constants. The viscosity of a liquid is a very tough nut to crack, as he well knows, because when the stuff is cooled by merely 40 degrees, its viscosity can change by a factor of a million. I was really amazed by fluid viscosity in the early days of NMR, when it turned out that glycerin was just what we needed to explore the behavior of spin relaxation. And yet if you were a little bug inside the glycerin looking around, you wouldn't see much change in your glycerin as it cooled. Viki will say that he can at least predict the <i>logarithm </i>of the viscosity. And that, of course, is correct because the reason viscosity changes is that it's got one of these activation energy things and what he can predict is the order of magnitude of the exponent. But it's more mysterious than that, Viki, because if you look at the Chemical Rubber Handbook table you will find that there is almost no liquid with viscosity much lower than that of water. The viscosities have a big range <i>but they stop at the same place</i>. I don't understand that. That's what I'm leaving for him. </p>
 <p><img height="472" src="https://raw.githubusercontent.com/lmmx/reynolds-number/master/images/figure1.gif" width="351" align="left" border="0">Now, I'm going to talk about a world which, as physicists, we almost never think about. The physicist hears about viscosity in high school when he's repeating Millikan's oil drop experiment and he never hears about it again, at least not in what I teach. And Reynolds's number, of course, is something for the engineers. And the <i>low </i>Reynolds's number regime most engineers aren't even interested in--except possibly chemical engineers, in connection with fluidized beds, a fascinating topic I heard about from a chemical engineering friend at MIT. But I want to take you into the world of very low Reynolds number--a world which is inhabited by the overwhelming majority of the organisms in this room. This world is quite different form the one that we have developed our intuitions in. </p>
@@ -31,5 +87,6 @@
 <p><img height="444" src="https://raw.githubusercontent.com/lmmx/reynolds-number/master/images/figure20.gif" width="427" align="left">Let's go back and look at one of those sections from Berg's track (Fig. 11). You'll see that there are some little trips, but otherwise you might ask why did it go clear over here and stop. Why did it go back? Well, my suggestions is, and I'd like to put this forward very tentatively, that the reason it does is because it's trying to outrun diffusion. Otherwise, it might as well sit still, as indeed do the mutants who don't have flagella. Now there is still another thing that I put forward with even more hesitation because I haven't tried tried this out on Howard yet. When he did his chemotaxis experiments, he found a very interesting behavior. If these things are put in a medium where there is a gradient of something that they like, they gradually work their way upstream. But if you look at how they do it and ask what rules they are using, what the algorithm is to use the current language, for finding your way upstream, it turns out that it's very simple. The algorithm is: if things are getting better don't stop so soon. If, in other words, you plot, as Berg has done in some of his papers, the distribution of path lengths between runs and the little stops that he calls "twiddles," the distribution of path lengths if they are going <i>up </i>the gradient gets longer. That's a very simple rule for working your way to where things are better. If they're going down the gradient, though, they don't get shorter. And that seems a little puzzling. Why, if things are getting worse, don't they change sooner? My suggestion is that there is no point in stopping sooner. there is a sort of bedrock length which outruns diffusion and is useful for sampling the medium. shorter paths would be a ridiculous way to sample. It may be something like that, but as I say, I don't know. the residue of education that I got from this is partly this stuff about simple fluid mechanics, partly the realization that the mechanism of propulsion is really not very important except, of course, for the physiology of that very mysterious motor, which physicists aren't competent even to conjecture about. </p>
 <p>I come back for a moment to Osborne Reynolds. That was a very great man. He was a professor of engineering, actually. He was the one who not only invented Reynolds number, but he was also the one who showed what turbulence amounts to and that there is an instability in flow, and all that. He is also the one who solved the problem for how you lubricate a bearing, which is a very subtle problem that I recommend to anyone who hasn't looked into it. But I discovered just recently in reading in his collected works that toward the end of his life, in 1903, he published a very long paper on the details of the <i>sub mechanical universe </i>, and he had a complete theory which involved small particles of diameter 10<sup>&minus;18</sup> cm. It gets very nutty from there on. It's a mechanical model, the particles interact with one another and fill all space. But I thought that, incongruous as it may have seemed to put this kind of stuff in between our studies of the sub mechanical universe today, I believe that Osborne Reynolds would not have found that incongruous, and I'm quite positive that Viki doesn't. </p>
 <p><font size="-2">Webified by <a href="http://brody.bioeng.washington.edu/">J. Brody</a>, Dec. 1997.</font> </p>
+<p><font size="-2"><a href="https://github.com/lmmx/reynolds-number">Reformatted</a> by Louis, Apr. 2015 :-)</font> </p>
 </body>
 </html>
